@@ -1,0 +1,8 @@
+super + g
+	firefox
+XF86MonBrightness{Up,Down}
+	light -{A,U} 5
+super + shift + r
+	shutdown now
+XF86Audio{Raise,Lower}Volume
+	pactl set-sink-volume @DEFAULT_SINK@ {+,-}5% && kill -44 $(pidof dwmblocks)
